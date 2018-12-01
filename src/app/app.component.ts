@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model';
+import { Model, TodoItem } from './model';
 
 @Component({
   selector: 'todo-app',
@@ -12,5 +12,9 @@ export class AppComponent {
 
   getName(): string {
     return this.model.user;
+  }
+
+  getTodoItems(): Array<TodoItem> {
+    return this.model.items;
   }
 }
